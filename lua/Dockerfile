@@ -15,3 +15,4 @@ RUN make linux test
 RUN make linux install
 
 WORKDIR /smutdose/lua
+CMD ["lua"]
