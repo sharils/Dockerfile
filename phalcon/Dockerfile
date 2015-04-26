@@ -4,6 +4,7 @@ MAINTAINER sharils@users.noreply.github.com
 RUN apt-get update
 
 # Phalcon's optional dependencies
+RUN apt-get install -y libssl-dev
 RUN pecl install mongo
 RUN docker-php-ext-install mbstring
 RUN docker-php-ext-install pdo_mysql
