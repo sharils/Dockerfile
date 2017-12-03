@@ -10,8 +10,7 @@ git clone --depth=1 https://github.com/sharils/Dockerfile /tmp/Dockerfile
 cd /tmp/Dockerfile/phoenix
 
 # Create app
-docker-compose run --rm --volume $PWD:$PWD --workdir $PWD web mix phx.new hello
-docker-compose down
+docker-compose run --no-deps --rm --volume $PWD:$PWD --workdir $PWD web mix phx.new hello
 cp Dockerfile docker-compose.yaml hello
 cd hello
 
@@ -19,16 +18,19 @@ cd hello
 sed -i.bak '/hostname: "localhost",/s/hostname: "localhost",/hostname: "db",/' ./config/dev.exs
 rm ./config/dev.exs.bak
 
-# Customise app port (optional)
+# (optional) Customise app port, if this port is changed,
 sed -i.bak '/http: \[port: 4000\],/s/http: \[port: 4000\],/http: [port: 25976],/' ./config/dev.exs
+sed -i.bak '/- "4000:4000"/s/- "4000:4000"/- "25976:25976"/' ./docker-compose.yaml
 rm ./config/dev.exs.bak
+rm ./docker-compose.yaml.bak
 ```
 
 ## Create database
 
 ```sh
 # Create database for the app
-docker-compose run web mix ecto.create
+docker-compose run --rm web mix ecto.create
+docker-compose down
 ```
 
 ## Start App
