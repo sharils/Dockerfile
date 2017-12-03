@@ -11,7 +11,7 @@ cd /tmp/Dockerfile/phoenix
 
 # Create app
 docker-compose run --no-deps --rm --volume $PWD:$PWD --workdir $PWD web mix phx.new hello
-cp Dockerfile docker-compose.yaml hello
+cp docker-compose.yaml hello
 cd hello
 
 # Change db hostname to match docker-compose.yaml file
