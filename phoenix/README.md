@@ -54,8 +54,11 @@ docker-compose down --volume
 ## Versions
 
 ```sh
-$ docker-compose run --no-deps --rm web sh -c 'mix phx.new --version && node -v && npm -v'
+$ docker-compose run --no-deps --rm web sh -c 'mix phx.new --version && elixir -v && echo -n "node " && node -v && echo -n "npm " && npm -v'
 Phoenix v1.3.0
-v8.9.1
-5.5.1
+Erlang/OTP 20 [erts-9.1.5] [source] [64-bit] [smp:2:2] [ds:2:2:10] [async-threads:10] [hipe] [kernel-poll:false]
+
+Elixir 1.5.2
+node v8.9.1
+npm 5.5.1
 ```
