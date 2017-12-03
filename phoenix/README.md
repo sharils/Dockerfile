@@ -25,7 +25,7 @@ rm ./config/dev.exs.bak
 rm ./docker-compose.yaml.bak
 ```
 
-## Create database
+## Create Database
 
 ```sh
 # Create database for the app
@@ -39,7 +39,7 @@ docker-compose down
 docker-compose up
 ```
 
-## Clean up
+## Clean Up
 
 ```sh
 # Remove just containers
