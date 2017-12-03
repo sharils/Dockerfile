@@ -1,7 +1,7 @@
 version: '3'
 services:
   web:
-    build: .
+    image: smutdose/phoenix
     command: mix phx.server
     depends_on:
     - db
