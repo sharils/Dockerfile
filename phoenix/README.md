@@ -19,7 +19,7 @@ sed -i.bak '/hostname: "localhost",/s/hostname: "localhost",/hostname: "db",/' .
 rm ./config/dev.exs.bak
 
 # Customise app port (optional)
-sed -i.bak '/http: \[port: 4000\],/s/http: \[port: 4000\],/http: [port: 4000],/' ./config/dev.exs
+sed -i.bak '/http: \[port: 4000\],/s/http: \[port: 4000\],/http: [port: 25976],/' ./config/dev.exs
 rm ./config/dev.exs.bak
 
 # Create database for the app
@@ -47,7 +47,7 @@ docker-compose down --volume
 ## Versions
 
 ```sh
-$ docker-compose run --rm --volume /tmp/phoenix:/tmp/phoenix --workdir /tmp/phoenix web sh -c 'cd hello && mix phx.new --version && node -v && npm -v'
+$ docker-compose run web sh -c 'mix phx.new --version && node -v && npm -v'
 Starting phoenix_db_1 ... done
 Phoenix v1.3.0
 v8.9.1
