@@ -55,7 +55,6 @@ docker-compose down --volume
 
 ```sh
 $ docker-compose run --no-deps --rm web sh -c 'mix phx.new --version && node -v && npm -v'
-Starting phoenix_db_1 ... done
 Phoenix v1.3.0
 v8.9.1
 5.5.1
