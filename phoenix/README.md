@@ -11,6 +11,7 @@ cd /tmp/Dockerfile/phoenix
 
 # Create app
 docker-compose run --rm --volume $PWD:$PWD --workdir $PWD web mix phx.new hello
+docker-compose down
 cp Dockerfile docker-compose.yaml hello
 cd hello
 
@@ -21,7 +22,11 @@ rm ./config/dev.exs.bak
 # Customise app port (optional)
 sed -i.bak '/http: \[port: 4000\],/s/http: \[port: 4000\],/http: [port: 25976],/' ./config/dev.exs
 rm ./config/dev.exs.bak
+```
 
+## Create database
+
+```sh
 # Create database for the app
 docker-compose run web mix ecto.create
 ```
