@@ -19,8 +19,8 @@ sed -i.bak '/hostname: "localhost",/s/hostname: "localhost",/hostname: "db",/' .
 rm ./config/dev.exs.bak
 
 # (optional) Customise app port
-sed -i.bak '/http: \[port: 4000\],/s/http: \[port: 4000\],/http: [port: 25976],/' ./config/dev.exs
-sed -i.bak '/- "4000:4000"/s/- "4000:4000"/- "25976:25976"/' ./docker-compose.yaml
+sed -i.bak '/http: \[port: 4000\],/s/http: \[port: 4000\],/http: [port: 4000],/' ./config/dev.exs
+sed -i.bak '/- "4000:4000"/s/- "4000:4000"/- "4000:4000"/' ./docker-compose.yaml
 rm ./config/dev.exs.bak
 rm ./docker-compose.yaml.bak
 ```
