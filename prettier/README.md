@@ -1,5 +1,7 @@
 # Prettier
 
+Prettier is an opinionated code formatter. <https://prettier.io/>
+
 ## Usage
 
 ### Help
