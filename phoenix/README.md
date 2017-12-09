@@ -57,10 +57,11 @@ docker-compose down --volume
 
 ```sh
 $ docker-compose run --no-deps --rm web sh -c 'mix phx.new --version && elixir -v && echo -n "node " && node -v && echo -n "npm " && npm -v'
+Creating network "hello_default" with the default driver
 Phoenix v1.3.0
 Erlang/OTP 20 [erts-9.1.5] [source] [64-bit] [smp:2:2] [ds:2:2:10] [async-threads:10] [hipe] [kernel-poll:false]
 
 Elixir 1.5.2
-node v8.9.1
-npm 5.5.1
+node v6.10.3
+npm 3.10.10
 ```
