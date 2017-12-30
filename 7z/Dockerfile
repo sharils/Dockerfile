@@ -3,5 +3,5 @@ MAINTAINER sharils <sharils@users.noreply.github.com>
 
 RUN apk add --no-cache p7zip
 
-WORKDIR ["/pwd"]
+WORKDIR /pwd
 ENTRYPOINT ["7z"]
