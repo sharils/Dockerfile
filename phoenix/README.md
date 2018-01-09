@@ -11,6 +11,7 @@ cd /tmp/Dockerfile/phoenix
 
 # Create app
 docker-compose run --no-deps --rm --volume $PWD:$PWD --workdir $PWD web mix phx.new hello
+docker volume rm phoenix_dbdata
 
 # Enable docker-compose in the app
 cp docker-compose.yaml hello
