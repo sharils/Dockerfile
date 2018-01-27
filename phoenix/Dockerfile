@@ -1,4 +1,4 @@
-FROM elixir:alpine
+FROM elixir:1.6-alpine
 MAINTAINER sharils <sharils@users.noreply.github.com>
 
 RUN set -xe && \
