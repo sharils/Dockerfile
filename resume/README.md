@@ -9,7 +9,7 @@ Usage
 ### Init ###
 
 ```sh
-docker run --interactive --rm --volume $PWD:/resume smutdose/resume init
+docker run --interactive --rm --tty --volume $PWD:/resume smutdose/resume init
 ```
 
 ### Serve ###
