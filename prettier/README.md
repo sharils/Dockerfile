@@ -16,6 +16,12 @@ docker run --rm -v $PWD:/prettier smutdose/prettier
 docker run --rm -v $PWD:/prettier smutdose/prettier --version
 ```
 
+### JavaScript
+
+```sh
+docker run --rm -v $PWD:/prettier smutdose/prettier --write '**/*.js'
+```
+
 ### Markdown
 
 ```sh
