@@ -22,8 +22,13 @@ docker run --rm -v $PWD:/prettier smutdose/prettier --version
 docker run --rm -v $PWD:/prettier smutdose/prettier --write '**/*.js'
 ```
 
+### JSON
+
+```sh
+docker run --rm -v $PWD:/prettier smutdose/prettier --parser=json --write '**/*.json'
+```
+
 ### Markdown
 
 ```sh
-docker run --rm -v $PWD:/prettier smutdose/prettier --parser=markdown --write README.md
-```
+docker run --rm -v $PWD:/prettier smutdose/prettier --parser=markdown --write '**/*.md'
